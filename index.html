@@ -7,6 +7,55 @@
     <title>Calculator</title>
 </head>
 <body>
-    
+    <div id="calcbody">
+        <table border="1"> 
+            <tr>
+                <td colspan="3"><input id="display" type="text"></td>
+                <td><input type="button" value="C"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="numbutton" value="1"></td>
+                <td><input type="button" class="numbutton" value="2"></td>
+                <td><input type="button" class="numbutton" value="3"></td>
+                <td><input type="button" value="+"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="numbutton" value="4"></td>
+                <td><input type="button" class="numbutton" value="5"></td>
+                <td><input type="button" class="numbutton" value="6"></td>
+                <td><input type="button" value="-"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="numbutton" value="7"></td>
+                <td><input type="button" class="numbutton" value="8"></td>
+                <td><input type="button" class="numbutton" value="9"></td>
+                <td><input type="button" value="*"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="0"></td>
+                <td><input type="button" value="="></td>
+                <td><input type="button" value="/"></td>
+            </tr>
+         </table> 
+    </div>
+
+    <script>
+        let numbuttons = document.getElementsByClassName("numbutton");
+        let display = document.getElementById("display");
+        let displayVal = "";
+
+        for (var i = 0; i < numbuttons.length; i++) {
+            numbuttons[i].addEventListener('click', displayValue, false);
+        }
+
+        function displayValue(){
+            //display.value += buttonVal;
+            console.log(numbuttons);
+        }
+
+        function operate(){
+
+        }
+    </script>
 </body>
 </html>
